@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: vaibhavp
+    provider: github
+    repository: jx-demo
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: vaibhavp-jx-demo
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/vaibhavp/jx-demo.git
+  org: vaibhavp
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-demo
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/vaibhavp/jx-demo
