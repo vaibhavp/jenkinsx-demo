@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: vaibhavp
+    provider: github
+    repository: golan-jx-demo
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: vaibhavp-golan-jx-demo
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/vaibhavp/golan-jx-demo.git
+  org: vaibhavp
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: golan-jx-demo
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/vaibhavp/golan-jx-demo

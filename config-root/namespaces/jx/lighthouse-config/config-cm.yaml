@@ -7,6 +7,8 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        vaibhavp/golan-jx-demo: true
+        vaibhavp/golan-jx3-demo: true
         vaibhavp/jenkinsx-demo: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +21,8 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        vaibhavp/golan-jx-demo: merge
+        vaibhavp/golan-jx3-demo: merge
         vaibhavp/jenkinsx-demo: merge
       queries:
       - labels:
@@ -31,6 +35,8 @@ data:
         - needs-rebase
         repos:
         - vaibhavp/jenkinsx-demo
+        - vaibhavp/golan-jx-demo
+        - vaibhavp/golan-jx3-demo
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +47,8 @@ data:
         - needs-rebase
         repos:
         - vaibhavp/jenkinsx-demo
+        - vaibhavp/golan-jx-demo
+        - vaibhavp/golan-jx3-demo
       target_url: http://lighthouse-jx.localhost.nip.io/merge/status
 kind: ConfigMap
 metadata:
