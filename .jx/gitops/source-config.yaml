@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: golan-jx-demo
+    - name: golan-jx3-demo
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
