@@ -6,6 +6,14 @@ data:
       repos:
       - vaibhavp/jenkinsx-demo
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - vaibhavp/golan-jx-demo
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - vaibhavp/jx-demo
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -16,7 +24,17 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      vaibhavp/golan-jx-demo:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       vaibhavp/jenkinsx-demo:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      vaibhavp/jx-demo:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -26,8 +44,40 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      vaibhavp/golan-jx-demo:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       vaibhavp/jenkinsx-demo:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      vaibhavp/jx-demo:
       - approve
       - assign
       - blunderbuss
@@ -55,6 +105,14 @@ data:
     - repos:
       - vaibhavp/jenkinsx-demo
       trusted_org: todo
+    - repos:
+      - vaibhavp/golan-jx-demo
+      trusted_org: todo
+    - repos:
+      - vaibhavp/jx-demo
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
