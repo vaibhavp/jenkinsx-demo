@@ -110,8 +110,8 @@
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
     resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
     version: 0.25.0
-- namespace: jx-production
-  path: helmfiles/jx-production/helmfile.yaml
+- namespace: jx-staging
+  path: helmfiles/jx-staging/helmfile.yaml
   releases:
   - apiVersion: v1
     appVersion: 0.0.1
@@ -122,5 +122,5 @@
     name: jx-demo
     repositoryName: dev
     repositoryUrl: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts/
-    resourcePath: config-root/namespaces/jx-production/jx-demo
+    resourcePath: config-root/namespaces/jx-staging/jx-demo
     version: 0.0.1
