@@ -1,0 +1,22 @@
+# Source: jx-demo/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'jx-demo'
+  name: jx-demo
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: jx-demo
+                port:
+                  number: 80
+      host: jx-demo-jx-production.192.168.49.2.nip.io
