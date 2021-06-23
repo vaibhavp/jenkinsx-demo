@@ -20,4 +20,4 @@ spec:
                 port:
                   number: 80
             path: "/"
-      host: bucketrepo-jx.localhost.nip.io
+      host: bucketrepo-jx.192.168.49.2.nip.io

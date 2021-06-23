@@ -49,7 +49,7 @@ data:
         - vaibhavp/jenkinsx-demo
         - vaibhavp/golan-jx-demo
         - vaibhavp/jx-demo
-      target_url: http://lighthouse-jx.localhost.nip.io/merge/status
+      target_url: http://lighthouse-jx.192.168.49.2.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
